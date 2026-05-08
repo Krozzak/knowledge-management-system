@@ -1,20 +1,26 @@
 ---
-title: "Specific Knowledge"
+title: Specific Knowledge
 type: concept
 cluster: Stratégie & Levier
 related:
-  - concept:permissionless-leverage
-  - author:naval-ravikant
-citedBy: []
+- concept:permissionless-leverage
+- author:naval-ravikant
+citedBy:
+- concept:permissionless-leverage
+- concept:small-world-network
 aliases:
-  fr: ["connaissance spécifique"]
-  en: ["specific knowledge"]
+  fr:
+  - connaissance spécifique
+  en:
+  - specific knowledge
 tags: []
 status: draft
-dateCreated: "2026-01-01"
+dateCreated: '2026-01-01'
 sources:
-  - "Ravikant, N. in Jorgenson, E. (2018). The Almanack of Naval Ravikant. Magrathea Publishing."
+- Ravikant, N. in Jorgenson, E. (2018). The Almanack of Naval Ravikant. Magrathea
+  Publishing.
 ---
+
 
 # Specific Knowledge — La connaissance spécifique
 

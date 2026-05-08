@@ -1,23 +1,30 @@
 ---
-title: "Small World Network"
+title: Small World Network
 type: concept
 cluster: Systèmes
 related:
-  - concept:permissionless-leverage
-  - concept:specific-knowledge
-  - concept:shelling-point
-citedBy: []
+- concept:permissionless-leverage
+- concept:specific-knowledge
+- concept:shelling-point
+citedBy:
+- concept:loi-de-gall
+- concept:permissionless-leverage
 aliases:
-  fr: ["réseau petit monde"]
-  en: ["small world network"]
+  fr:
+  - réseau petit monde
+  en:
+  - small world network
 tags: []
 status: draft
-dateCreated: "2026-01-01"
+dateCreated: '2026-01-01'
 sources:
-  - "Watts, D. J. & Strogatz, S. H. (1998). Collective dynamics of 'small-world' networks. Nature, 393, 440–442."
-  - "Milgram, S. (1967). The Small World Problem. Psychology Today, 1(1), 61–67."
-  - "Barabási, A.-L. & Albert, R. (1999). Emergence of Scaling in Random Networks. Science, 286(5439), 509–512."
+- Watts, D. J. & Strogatz, S. H. (1998). Collective dynamics of 'small-world' networks.
+  Nature, 393, 440–442.
+- Milgram, S. (1967). The Small World Problem. Psychology Today, 1(1), 61–67.
+- Barabási, A.-L. & Albert, R. (1999). Emergence of Scaling in Random Networks. Science,
+  286(5439), 509–512.
 ---
+
 
 # Small World Network — Le réseau petit monde
 

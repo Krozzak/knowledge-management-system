@@ -1,22 +1,28 @@
 ---
-title: "Feynman Technique"
+title: Feynman Technique
 type: concept
 cluster: Cognition
 related:
-  - concept:retrieval-practice
-  - concept:ego-depletion
-  - author:richard-feynman
-citedBy: []
+- concept:retrieval-practice
+- concept:ego-depletion
+- author:richard-feynman
+citedBy:
+- concept:retrieval-practice
 aliases:
-  fr: ["technique Feynman", "apprendre en expliquant"]
-  en: ["Feynman technique", "teach to learn"]
+  fr:
+  - technique Feynman
+  - apprendre en expliquant
+  en:
+  - Feynman technique
+  - teach to learn
 tags: []
 status: draft
-dateCreated: "2026-02-22"
+dateCreated: '2026-02-22'
 sources:
-  - "Feynman, R. (1985). Surely You're Joking, Mr. Feynman! Norton & Company."
-  - "Feynman Lectures on Physics — Caltech, 1961-1963."
+- Feynman, R. (1985). Surely You're Joking, Mr. Feynman! Norton & Company.
+- Feynman Lectures on Physics — Caltech, 1961-1963.
 ---
+
 
 # Feynman Technique — Apprendre en expliquant simplement
 

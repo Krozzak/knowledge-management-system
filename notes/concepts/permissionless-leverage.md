@@ -1,21 +1,27 @@
 ---
-title: "Permissionless Leverage"
+title: Permissionless Leverage
 type: concept
 cluster: Stratégie & Levier
 related:
-  - concept:specific-knowledge
-  - concept:small-world-network
-  - author:naval-ravikant
-citedBy: []
+- concept:specific-knowledge
+- concept:small-world-network
+- author:naval-ravikant
+citedBy:
+- concept:small-world-network
+- concept:specific-knowledge
 aliases:
-  fr: ["levier sans permission"]
-  en: ["permissionless leverage"]
+  fr:
+  - levier sans permission
+  en:
+  - permissionless leverage
 tags: []
 status: draft
-dateCreated: "2026-01-01"
+dateCreated: '2026-01-01'
 sources:
-  - "Ravikant, N. in Jorgenson, E. (2018). The Almanack of Naval Ravikant. Magrathea Publishing."
+- Ravikant, N. in Jorgenson, E. (2018). The Almanack of Naval Ravikant. Magrathea
+  Publishing.
 ---
+
 
 # Permissionless Leverage — Le levier sans permission
 

@@ -1,21 +1,30 @@
 ---
-title: "Ego Depletion"
+title: Ego Depletion
 type: concept
 cluster: Cognition
 related:
-  - concept:planning-fallacy
-  - concept:retrieval-practice
-citedBy: []
+- concept:planning-fallacy
+- concept:retrieval-practice
+citedBy:
+- concept:feynman-technique
+- concept:planning-fallacy
+- concept:retrieval-practice
 aliases:
-  fr: ["épuisement de l'ego", "épuisement de la volonté"]
-  en: ["ego depletion", "decision fatigue"]
+  fr:
+  - épuisement de l'ego
+  - épuisement de la volonté
+  en:
+  - ego depletion
+  - decision fatigue
 tags: []
 status: draft
-dateCreated: "2026-01-01"
+dateCreated: '2026-01-01'
 sources:
-  - "Baumeister et al. (1998). Ego Depletion: Is the Active Self a Limited Resource? Journal of Personality and Social Psychology."
-  - "Danziger et al. (2011). Extraneous factors in judicial decisions. PNAS."
+- 'Baumeister et al. (1998). Ego Depletion: Is the Active Self a Limited Resource?
+  Journal of Personality and Social Psychology.'
+- Danziger et al. (2011). Extraneous factors in judicial decisions. PNAS.
 ---
+
 
 # Ego Depletion — La volonté est une ressource limitée
 

@@ -1,21 +1,28 @@
 ---
-title: "Loi de Gall"
+title: Loi de Gall
 type: concept
 cluster: Systèmes
 related:
-  - concept:planning-fallacy
-  - concept:small-world-network
-citedBy: []
+- concept:planning-fallacy
+- concept:small-world-network
+citedBy:
+- concept:planning-fallacy
 aliases:
-  fr: ["loi de Gall", "systèmes simples"]
-  en: ["Gall's law", "simple systems"]
+  fr:
+  - loi de Gall
+  - systèmes simples
+  en:
+  - Gall's law
+  - simple systems
 tags: []
 status: draft
-dateCreated: "2026-01-01"
+dateCreated: '2026-01-01'
 sources:
-  - "Gall, J. (1975). General Systemantics: How Systems Work and Especially How They Fail."
-  - "Gall, J. (2002). The Systems Bible (3ème édition)."
+- 'Gall, J. (1975). General Systemantics: How Systems Work and Especially How They
+  Fail.'
+- Gall, J. (2002). The Systems Bible (3ème édition).
 ---
+
 
 # Loi de Gall — Les systèmes complexes qui marchent
 

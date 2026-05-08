@@ -1,21 +1,29 @@
 ---
-title: "Planning Fallacy"
+title: Planning Fallacy
 type: concept
 cluster: Productivité
 related:
-  - concept:ego-depletion
-  - concept:loi-de-gall
-citedBy: []
+- concept:ego-depletion
+- concept:loi-de-gall
+citedBy:
+- concept:ego-depletion
+- concept:loi-de-gall
 aliases:
-  fr: ["biais d'optimisme", "fallace de planification"]
-  en: ["planning fallacy", "optimism bias"]
+  fr:
+  - biais d'optimisme
+  - fallace de planification
+  en:
+  - planning fallacy
+  - optimism bias
 tags: []
 status: draft
-dateCreated: "2026-04-03"
+dateCreated: '2026-04-03'
 sources:
-  - "Kahneman, D. & Tversky, A. (1979). Intuitive prediction: biases and corrective procedures."
-  - "Kahneman, D. (2011). Thinking, Fast and Slow."
+- 'Kahneman, D. & Tversky, A. (1979). Intuitive prediction: biases and corrective
+  procedures.'
+- Kahneman, D. (2011). Thinking, Fast and Slow.
 ---
+
 
 # Planning Fallacy
 

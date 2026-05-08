@@ -1,21 +1,31 @@
 ---
-title: "Retrieval Practice"
+title: Retrieval Practice
 type: concept
 cluster: Cognition
 related:
-  - concept:feynman-technique
-  - concept:ego-depletion
-citedBy: []
+- concept:feynman-technique
+- concept:ego-depletion
+citedBy:
+- concept:ego-depletion
+- concept:feynman-technique
 aliases:
-  fr: ["pratique du rappel", "effet de test"]
-  en: ["retrieval practice", "testing effect", "test-enhanced learning"]
+  fr:
+  - pratique du rappel
+  - effet de test
+  en:
+  - retrieval practice
+  - testing effect
+  - test-enhanced learning
 tags: []
 status: draft
-dateCreated: "2026-01-01"
+dateCreated: '2026-01-01'
 sources:
-  - "Roediger, H.L. & Karpicke, J.D. (2006). Test-Enhanced Learning. Psychological Science, 17(3), 249–255."
-  - "Roediger, H.L. & Karpicke, J.D. (2006). The Power of Testing Memory. Perspectives on Psychological Science, 1(3), 181–210."
+- Roediger, H.L. & Karpicke, J.D. (2006). Test-Enhanced Learning. Psychological Science,
+  17(3), 249–255.
+- Roediger, H.L. & Karpicke, J.D. (2006). The Power of Testing Memory. Perspectives
+  on Psychological Science, 1(3), 181–210.
 ---
+
 
 # Retrieval Practice — Roediger & Karpicke (2006)
 
