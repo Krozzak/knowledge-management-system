@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# .githooks/post-commit — KMS
+# Recalcule les backlinks et régénère _graph.json après chaque commit.
+
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+
+echo "[KMS] Recalcul des backlinks..."
+python3 "$REPO_ROOT/scripts/backlinks_updater.py"
+
+echo "[KMS] Génération de _graph.json..."
+node "$REPO_ROOT/scripts/generate_graph.js"
+
+echo "[KMS] Graphe mis à jour."

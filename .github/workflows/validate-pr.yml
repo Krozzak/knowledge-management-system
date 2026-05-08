@@ -1,0 +1,181 @@
+name: Validate PR
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python deps
+        run: pip install pyyaml
+
+      - name: Get changed .md files
+        id: changed
+        run: |
+          FILES=$(git diff --name-only origin/${{ github.base_ref }}...HEAD -- 'notes/**/*.md' | tr '\n' ' ')
+          echo "files=$FILES" >> $GITHUB_OUTPUT
+
+      - name: Validate frontmatter
+        id: frontmatter
+        if: steps.changed.outputs.files != ''
+        run: |
+          python3 - <<'EOF'
+          import yaml, sys
+          from pathlib import Path
+
+          REQUIRED = ["title", "cluster", "related", "status", "dateCreated"]
+          VALID_STATUS = {"draft", "ready", "published"}
+          VALID_PREFIXES = {"concept", "book", "author", "project", "article"}
+          import re
+          KEBAB = re.compile(r'^[a-z0-9-]+$')
+
+          files = "${{ steps.changed.outputs.files }}".split()
+          errors = []
+
+          for f in files:
+              p = Path(f)
+              if not p.exists():
+                  continue
+              content = p.read_text()
+              if not content.startswith("---"):
+                  errors.append(f"{f}: pas de frontmatter YAML")
+                  continue
+              parts = content.split("---", 2)
+              if len(parts) < 3:
+                  errors.append(f"{f}: frontmatter mal formé")
+                  continue
+              fm = yaml.safe_load(parts[1]) or {}
+
+              for field in REQUIRED:
+                  if not fm.get(field):
+                      errors.append(f"{f}: champ manquant '{field}'")
+
+              if fm.get("status") and fm["status"] not in VALID_STATUS:
+                  errors.append(f"{f}: status invalide '{fm['status']}'")
+
+              for ref in (fm.get("related") or []):
+                  if ":" not in ref:
+                      errors.append(f"{f}: related mal formé '{ref}' (manque préfixe type:)")
+                      continue
+                  prefix, slug = ref.split(":", 1)
+                  if prefix not in VALID_PREFIXES:
+                      errors.append(f"{f}: préfixe inconnu '{prefix}'")
+                  if not KEBAB.match(slug):
+                      errors.append(f"{f}: slug invalide '{slug}' (kebab-case attendu)")
+
+          if errors:
+              print("ERRORS=" + "|".join(errors))
+              sys.exit(1)
+          else:
+              print("ERRORS=")
+          EOF
+
+      - name: Check broken links
+        id: links
+        if: steps.changed.outputs.files != ''
+        run: |
+          python3 - <<'EOF'
+          import yaml, sys, json
+          from pathlib import Path
+
+          # Build index of all existing slugs
+          notes_dir = Path("notes")
+          existing = set()
+          if notes_dir.exists():
+              for md in notes_dir.rglob("*.md"):
+                  slug = md.stem.lower().replace("_", "-")
+                  folder = md.parent.name
+                  type_map = {"concepts":"concept","books":"book","authors":"author","projects":"project","articles":"article"}
+                  t = type_map.get(folder, folder.rstrip("s"))
+                  existing.add(f"{t}:{slug}")
+
+          # Also include changed files (PR may add new notes that reference each other)
+          changed = "${{ steps.changed.outputs.files }}".split()
+          pr_refs = set()
+          for f in changed:
+              p = Path(f)
+              if not p.exists(): continue
+              parts = p.read_text().split("---", 2)
+              if len(parts) >= 3:
+                  fm = yaml.safe_load(parts[1]) or {}
+                  slug = p.stem.lower().replace("_", "-")
+                  folder = p.parent.name
+                  type_map = {"concepts":"concept","books":"book","authors":"author","projects":"project","articles":"article"}
+                  t = type_map.get(folder, folder.rstrip("s"))
+                  pr_refs.add(f"{t}:{slug}")
+
+          all_refs = existing | pr_refs
+          broken = []
+
+          for f in changed:
+              p = Path(f)
+              if not p.exists(): continue
+              parts = p.read_text().split("---", 2)
+              if len(parts) < 3: continue
+              fm = yaml.safe_load(parts[1]) or {}
+              for ref in (fm.get("related") or []):
+                  if ":" in ref and ref not in all_refs:
+                      broken.append({"file": f, "broken_ref": ref})
+
+          if broken:
+              print(json.dumps(broken))
+              sys.exit(2)
+          else:
+              print("[]")
+          EOF
+
+      - name: Check duplicates
+        id: dupes
+        if: steps.changed.outputs.files != ''
+        run: |
+          python3 scripts/check_duplicates.py ${{ steps.changed.outputs.files }} > /tmp/dupes.json
+          cat /tmp/dupes.json
+
+      - name: Post summary comment
+        if: always() && steps.changed.outputs.files != ''
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const changed = `${{ steps.changed.outputs.files }}`.trim().split(/\s+/).filter(Boolean);
+            const frontmatterOk = '${{ steps.frontmatter.outcome }}' !== 'failure';
+            const linksOk = '${{ steps.links.outcome }}' !== 'failure';
+
+            let dupesData = { duplicates: [] };
+            try { dupesData = JSON.parse(fs.readFileSync('/tmp/dupes.json', 'utf8')); } catch {}
+
+            let body = `## ✅ Validation KMS\n\n`;
+            body += `**Fiches modifiées :** ${changed.length}\n`;
+            body += `**Frontmatter :** ${frontmatterOk ? '✅' : '❌ Erreurs détectées'}\n`;
+            body += `**Liens :** ${linksOk ? '✅' : '⚠️ Liens cassés détectés'}\n`;
+
+            if (dupesData.duplicates.length > 0) {
+              body += `\n### ⚠️ Doublons potentiels\n\n`;
+              for (const d of dupesData.duplicates) {
+                body += `- \`${d.new_file}\` ressemble à \`${d.existing_file}\` (score: ${d.score})\n`;
+                body += `  Options : fusionner / garder si angles différents / agréger\n`;
+              }
+            } else {
+              body += `**Doublons :** ✅ Aucun\n`;
+            }
+
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body
+            });
