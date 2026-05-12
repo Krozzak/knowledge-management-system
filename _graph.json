@@ -1,8 +1,20 @@
 {
   "clusters": {
-    "Sans cluster": {
-      "color": "#888888",
-      "emoji": "◆"
+    "Cognition": {
+      "color": "#e67e22",
+      "emoji": "🧠"
+    },
+    "Systèmes": {
+      "color": "#27ae60",
+      "emoji": "⚙️"
+    },
+    "Stratégie & Levier": {
+      "color": "#2c3e50",
+      "emoji": "🎯"
+    },
+    "Productivité": {
+      "color": "#4a90d9",
+      "emoji": "⚡"
     },
     "Philosophie": {
       "color": "#c0392b",
@@ -16,81 +28,81 @@
   "concepts": [
     {
       "slug": "ego-depletion",
-      "title": "ego-depletion",
+      "title": "Ego Depletion",
       "summary": "L'**ego depletion** désigne l'épuisement progressif de la capacité de self-control après des actes de résistance, prise de décision ou maintien de concentration. Quand la réserve baisse, la qualité de",
-      "cluster": "Sans cluster",
+      "cluster": "Cognition",
       "type": "concept",
       "relatedConcepts": []
     },
     {
       "slug": "feynman-technique",
-      "title": "feynman-technique",
+      "title": "Feynman Technique",
       "summary": "Pour vraiment comprendre un sujet, essaie de l'expliquer simplement. Les trous dans ton explication révèlent les trous dans ta compréhension.",
-      "cluster": "Sans cluster",
+      "cluster": "Cognition",
       "type": "concept",
       "relatedConcepts": []
     },
     {
       "slug": "loi-de-gall",
-      "title": "loi-de-gall",
+      "title": "Loi de Gall",
       "summary": "- Le système simple maîtrisé → complexité ajoutée progressivement → système complexe fonctionnel",
-      "cluster": "Sans cluster",
+      "cluster": "Systèmes",
       "type": "concept",
       "relatedConcepts": []
     },
     {
       "slug": "permissionless-leverage",
-      "title": "permissionless-leverage",
+      "title": "Permissionless Leverage",
       "summary": "Le Permissionless Leverage désigne les formes de levier qui **ne nécessitent l'approbation de personne** pour être déployées. Par opposition au levier de main-d'œuvre (qui nécessite de recruter) et au",
-      "cluster": "Sans cluster",
+      "cluster": "Stratégie & Levier",
       "type": "concept",
       "relatedConcepts": []
     },
     {
       "slug": "planning-fallacy",
-      "title": "planning-fallacy",
+      "title": "Planning Fallacy",
       "summary": "Tendance systématique à sous-estimer le temps, les coûts et les risques d'une tâche future, tout en surestimant les bénéfices — **même en sachant** que des projets similaires ont pris plus de temps pa",
-      "cluster": "Sans cluster",
+      "cluster": "Productivité",
       "type": "concept",
       "relatedConcepts": []
     },
     {
       "slug": "retrieval-practice",
-      "title": "retrieval-practice",
+      "title": "Retrieval Practice",
       "summary": "La Retrieval Practice (ou Testing Effect) est le phénomène par lequel **l'acte de se rappeler une information la consolide plus efficacement que de la relire ou la revoir**.",
-      "cluster": "Sans cluster",
+      "cluster": "Cognition",
       "type": "concept",
       "relatedConcepts": []
     },
     {
       "slug": "small-world-network",
-      "title": "small-world-network",
+      "title": "Small World Network",
       "summary": "Un Small World Network est un graphe dans lequel **n'importe quel nœud est accessible depuis n'importe quel autre nœud en un petit nombre de sauts**, malgré un nombre de connexions locales faible. La ",
-      "cluster": "Sans cluster",
+      "cluster": "Systèmes",
       "type": "concept",
       "relatedConcepts": []
     },
     {
       "slug": "specific-knowledge",
-      "title": "specific-knowledge",
+      "title": "Specific Knowledge",
       "summary": "La Specific Knowledge est la connaissance qui **ne peut pas être enseignée mais peut être apprise**. Elle émerge de l'intersection unique entre le tempérament inné, l'environnement familial, et l'obse",
-      "cluster": "Sans cluster",
+      "cluster": "Stratégie & Levier",
       "type": "concept",
       "relatedConcepts": []
     },
     {
       "slug": "kahneman-thinking-fast-and-slow",
-      "title": "kahneman-thinking-fast-and-slow",
+      "title": "Thinking, Fast and Slow",
       "summary": "Le cerveau opère via deux systèmes cognitifs — le Système 1 (rapide, automatique, intuitif) et le Système 2 (lent, délibéré, rationnel). La majorité de nos erreurs viennent du fait que S1 gouverne san",
-      "cluster": "Sans cluster",
+      "cluster": "Cognition",
       "type": "book",
       "relatedConcepts": []
     },
     {
       "slug": "naval-ravikant-almanack",
-      "title": "naval-ravikant-almanack",
+      "title": "The Almanack of Naval Ravikant",
       "summary": "Naval défend deux thèses parallèles :",
-      "cluster": "Sans cluster",
+      "cluster": "Stratégie & Levier",
       "type": "book",
       "relatedConcepts": []
     },
@@ -106,17 +118,17 @@
     },
     {
       "slug": "daniel-kahneman",
-      "title": "daniel-kahneman",
+      "title": "Daniel Kahneman",
       "summary": "Kahneman cherche à comprendre **comment les humains pensent réellement** — pas comment ils devraient penser selon la théorie économique classique. Sa réponse : deux systèmes cognitifs gouvernent nos d",
-      "cluster": "Sans cluster",
+      "cluster": "Cognition",
       "type": "author",
       "relatedConcepts": []
     },
     {
       "slug": "naval-ravikant",
-      "title": "naval-ravikant",
+      "title": "Naval Ravikant",
       "summary": "Naval défend deux thèses parallèles qui se nourrissent mutuellement :",
-      "cluster": "Sans cluster",
+      "cluster": "Stratégie & Levier",
       "type": "author",
       "relatedConcepts": []
     },
