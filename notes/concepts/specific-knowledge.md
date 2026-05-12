@@ -5,7 +5,11 @@ cluster: Stratégie & Levier
 related:
 - concept:permissionless-leverage
 - author:naval-ravikant
+- book:naval-ravikant-almanack
 citedBy:
+- author:naval-ravikant
+- author:tugan-labossiere
+- book:naval-ravikant-almanack
 - concept:permissionless-leverage
 - concept:small-world-network
 aliases:
@@ -20,6 +24,7 @@ sources:
 - Ravikant, N. in Jorgenson, E. (2018). The Almanack of Naval Ravikant. Magrathea
   Publishing.
 ---
+
 
 
 # Specific Knowledge — La connaissance spécifique

@@ -5,7 +5,11 @@ cluster: Productivité
 related:
 - concept:ego-depletion
 - concept:loi-de-gall
+- author:daniel-kahneman
+- book:kahneman-thinking-fast-and-slow
 citedBy:
+- author:daniel-kahneman
+- book:kahneman-thinking-fast-and-slow
 - concept:ego-depletion
 - concept:loi-de-gall
 aliases:
@@ -23,6 +27,7 @@ sources:
   procedures.'
 - Kahneman, D. (2011). Thinking, Fast and Slow.
 ---
+
 
 
 # Planning Fallacy

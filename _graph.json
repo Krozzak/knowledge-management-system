@@ -1,86 +1,135 @@
 {
   "clusters": {
-    "Cognition": {
-      "color": "#e67e22",
-      "emoji": "🧠"
+    "Sans cluster": {
+      "color": "#888888",
+      "emoji": "◆"
     },
-    "Systèmes": {
-      "color": "#27ae60",
-      "emoji": "⚙️"
+    "Philosophie": {
+      "color": "#c0392b",
+      "emoji": "📜"
     },
-    "Stratégie & Levier": {
-      "color": "#2c3e50",
-      "emoji": "🎯"
-    },
-    "Productivité": {
-      "color": "#4a90d9",
-      "emoji": "⚡"
+    "IA & Outils": {
+      "color": "#8e44ad",
+      "emoji": "🤖"
     }
   },
   "concepts": [
     {
       "slug": "ego-depletion",
-      "title": "Ego Depletion",
+      "title": "ego-depletion",
       "summary": "L'**ego depletion** désigne l'épuisement progressif de la capacité de self-control après des actes de résistance, prise de décision ou maintien de concentration. Quand la réserve baisse, la qualité de",
-      "cluster": "Cognition",
+      "cluster": "Sans cluster",
       "type": "concept",
       "relatedConcepts": []
     },
     {
       "slug": "feynman-technique",
-      "title": "Feynman Technique",
+      "title": "feynman-technique",
       "summary": "Pour vraiment comprendre un sujet, essaie de l'expliquer simplement. Les trous dans ton explication révèlent les trous dans ta compréhension.",
-      "cluster": "Cognition",
+      "cluster": "Sans cluster",
       "type": "concept",
       "relatedConcepts": []
     },
     {
       "slug": "loi-de-gall",
-      "title": "Loi de Gall",
+      "title": "loi-de-gall",
       "summary": "- Le système simple maîtrisé → complexité ajoutée progressivement → système complexe fonctionnel",
-      "cluster": "Systèmes",
+      "cluster": "Sans cluster",
       "type": "concept",
       "relatedConcepts": []
     },
     {
       "slug": "permissionless-leverage",
-      "title": "Permissionless Leverage",
+      "title": "permissionless-leverage",
       "summary": "Le Permissionless Leverage désigne les formes de levier qui **ne nécessitent l'approbation de personne** pour être déployées. Par opposition au levier de main-d'œuvre (qui nécessite de recruter) et au",
-      "cluster": "Stratégie & Levier",
+      "cluster": "Sans cluster",
       "type": "concept",
       "relatedConcepts": []
     },
     {
       "slug": "planning-fallacy",
-      "title": "Planning Fallacy",
+      "title": "planning-fallacy",
       "summary": "Tendance systématique à sous-estimer le temps, les coûts et les risques d'une tâche future, tout en surestimant les bénéfices — **même en sachant** que des projets similaires ont pris plus de temps pa",
-      "cluster": "Productivité",
+      "cluster": "Sans cluster",
       "type": "concept",
       "relatedConcepts": []
     },
     {
       "slug": "retrieval-practice",
-      "title": "Retrieval Practice",
+      "title": "retrieval-practice",
       "summary": "La Retrieval Practice (ou Testing Effect) est le phénomène par lequel **l'acte de se rappeler une information la consolide plus efficacement que de la relire ou la revoir**.",
-      "cluster": "Cognition",
+      "cluster": "Sans cluster",
       "type": "concept",
       "relatedConcepts": []
     },
     {
       "slug": "small-world-network",
-      "title": "Small World Network",
+      "title": "small-world-network",
       "summary": "Un Small World Network est un graphe dans lequel **n'importe quel nœud est accessible depuis n'importe quel autre nœud en un petit nombre de sauts**, malgré un nombre de connexions locales faible. La ",
-      "cluster": "Systèmes",
+      "cluster": "Sans cluster",
       "type": "concept",
       "relatedConcepts": []
     },
     {
       "slug": "specific-knowledge",
-      "title": "Specific Knowledge",
+      "title": "specific-knowledge",
       "summary": "La Specific Knowledge est la connaissance qui **ne peut pas être enseignée mais peut être apprise**. Elle émerge de l'intersection unique entre le tempérament inné, l'environnement familial, et l'obse",
-      "cluster": "Stratégie & Levier",
+      "cluster": "Sans cluster",
       "type": "concept",
       "relatedConcepts": []
+    },
+    {
+      "slug": "kahneman-thinking-fast-and-slow",
+      "title": "kahneman-thinking-fast-and-slow",
+      "summary": "Le cerveau opère via deux systèmes cognitifs — le Système 1 (rapide, automatique, intuitif) et le Système 2 (lent, délibéré, rationnel). La majorité de nos erreurs viennent du fait que S1 gouverne san",
+      "cluster": "Sans cluster",
+      "type": "book",
+      "relatedConcepts": []
+    },
+    {
+      "slug": "naval-ravikant-almanack",
+      "title": "naval-ravikant-almanack",
+      "summary": "Naval défend deux thèses parallèles :",
+      "cluster": "Sans cluster",
+      "type": "book",
+      "relatedConcepts": []
+    },
+    {
+      "slug": "aristote",
+      "title": "Aristote",
+      "summary": "La question fondatrice d'Aristote : **qu'est-ce que bien vivre ?** (*Éthique à Nicomaque*). Sa réponse : l'**eudaimonia** — l'épanouissement humain — s'atteint par l'exercice excellent des facultés pr",
+      "cluster": "Philosophie",
+      "type": "author",
+      "relatedConcepts": [
+        "poiesis-praxis-phronesis"
+      ]
+    },
+    {
+      "slug": "daniel-kahneman",
+      "title": "daniel-kahneman",
+      "summary": "Kahneman cherche à comprendre **comment les humains pensent réellement** — pas comment ils devraient penser selon la théorie économique classique. Sa réponse : deux systèmes cognitifs gouvernent nos d",
+      "cluster": "Sans cluster",
+      "type": "author",
+      "relatedConcepts": []
+    },
+    {
+      "slug": "naval-ravikant",
+      "title": "naval-ravikant",
+      "summary": "Naval défend deux thèses parallèles qui se nourrissent mutuellement :",
+      "cluster": "Sans cluster",
+      "type": "author",
+      "relatedConcepts": []
+    },
+    {
+      "slug": "tugan-labossiere",
+      "title": "Tugan Labossière",
+      "summary": "Tugan est l'un des premiers à théoriser les **business models agentiques** en français — comment les agents IA transforment la structure économique des entreprises et créent de nouvelles opportunités ",
+      "cluster": "IA & Outils",
+      "type": "author",
+      "relatedConcepts": [
+        "permissionless-leverage",
+        "specific-knowledge"
+      ]
     }
   ]
 }

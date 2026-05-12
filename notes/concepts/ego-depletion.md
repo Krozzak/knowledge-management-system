@@ -5,7 +5,11 @@ cluster: Cognition
 related:
 - concept:planning-fallacy
 - concept:retrieval-practice
+- author:daniel-kahneman
+- book:kahneman-thinking-fast-and-slow
 citedBy:
+- author:daniel-kahneman
+- book:kahneman-thinking-fast-and-slow
 - concept:feynman-technique
 - concept:planning-fallacy
 - concept:retrieval-practice
@@ -24,6 +28,7 @@ sources:
   Journal of Personality and Social Psychology.'
 - Danziger et al. (2011). Extraneous factors in judicial decisions. PNAS.
 ---
+
 
 
 # Ego Depletion — La volonté est une ressource limitée

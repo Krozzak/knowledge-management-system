@@ -5,7 +5,6 @@ cluster: Cognition
 related:
 - concept:retrieval-practice
 - concept:ego-depletion
-- author:richard-feynman
 citedBy:
 - concept:retrieval-practice
 aliases:

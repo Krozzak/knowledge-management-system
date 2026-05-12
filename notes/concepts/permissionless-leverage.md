@@ -6,7 +6,11 @@ related:
 - concept:specific-knowledge
 - concept:small-world-network
 - author:naval-ravikant
+- book:naval-ravikant-almanack
 citedBy:
+- author:naval-ravikant
+- author:tugan-labossiere
+- book:naval-ravikant-almanack
 - concept:small-world-network
 - concept:specific-knowledge
 aliases:
@@ -21,6 +25,7 @@ sources:
 - Ravikant, N. in Jorgenson, E. (2018). The Almanack of Naval Ravikant. Magrathea
   Publishing.
 ---
+
 
 
 # Permissionless Leverage — Le levier sans permission
